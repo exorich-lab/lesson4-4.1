@@ -1,0 +1,51 @@
+Index: coin.rb
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- coin.rb	(revision 28fd7ab06ba52079b3a29e20c9d1862e70bd56a1)
++++ coin.rb	(date 1582559530163)
+@@ -1,22 +1,11 @@
+-# При помощи класса Random генерируем рандомные числа и присваиваем их переменным counter и edge
+-counter = rand(2) #   генерируем случайное число 0 или 1
+-edge = rand(10) #   генерируем случайное число от 0 до 9
+-
+-# Запускаем условный оператор с вероятностью 1 к 10 что монетка втснает на ребро
++# Запускаем условный оператор с вероятностью 1 к 10 что монетка вcтанет на ребро
+ # далее используем вложенный условный оператор и определяем рандомно
+ # с вероятностью 50% орел или решко и выводим значение в консоль
+-
+-if edge == 9
++if rand(10) == 9
+   puts "Монетка встала на ребро, попробуйте еще раз..."
+-else
+-  if counter == 0
++elsif
++  rand(2) == 0
+     puts "Выпало Решко"
+   else
+     puts  "Выпал Орёл"
+-
+-  end
+-
+-end
+-
+-
+-
++  end
+\ No newline at end of file
+Index: .idea/vcs.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/vcs.xml	(date 1582559125530)
++++ .idea/vcs.xml	(date 1582559125530)
+@@ -0,0 +1,6 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="VcsDirectoryMappings">
++    <mapping directory="$PROJECT_DIR$" vcs="Git" />
++  </component>
++</project>
+\ No newline at end of file
